@@ -1,0 +1,273 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('BG2_upscaled.jpeg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    opacity: 10;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    background-color: rgba(204, 217, 226, 0);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 3em;
+    text-shadow: 0 0 10px #ff5733, 0 0 20px #ffbd33, 0 0 30px #ff5733;
+    color: #ffbd33;
+    margin: 0;
+}
+
+.glow {
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        text-shadow: 0 0 10px #ff5733, 0 0 20px #ffbd33, 0 0 30px #ff5733;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff5733, 0 0 30px #ffbd33, 0 0 40px #ff5733;
+    }
+}
+
+/* Navigation Buttons */
+nav {
+    margin-top: 20px;
+}
+
+.nav-btn {
+    background-color: black;
+    color: #ffbd33;
+    border: none;
+    padding: 15px;
+    margin: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+    text-shadow: 0 0 10px #ff5733, 0 0 20px #ffbd33;
+    transition: background-color 0.3s, text-shadow 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #ff5733;
+    text-shadow: 0 0 10px #ffbd33, 0 0 20px #ff5733;
+}
+
+/* Image Options */
+.image-options {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s, filter 0.3s;
+    cursor: pointer;
+}
+
+.image-container:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+    filter: brightness(1.2); /* Make image slightly brighter */
+}
+
+.image-container:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 110%;
+    border-radius: 100%;
+    background: conic-gradient(#ff5733, #ffbd33, #ff5733, #ffbd33);
+    animation: rotateGradient 3s linear infinite;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+@keyframes rotateGradient {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Scary text on hover */
+.scary-text {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #e9b408;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1; /* Ensures the text shows above the image */
+}
+
+.image-container:hover .scary-text {
+    opacity: 1;
+}
+
+/* Timeline Section */
+.timeline header {
+    position: relative; /* Keep the header static */
+    z-index: 5; /* Ensure it stays above other elements */
+}
+
+.timeline header h2 {
+    color: #ff5733; /* Orange color for the heading */
+    text-shadow: 0 0 10px #ffbd33, 0 0 20px #ff5733; /* Glowing effect */
+    margin-bottom: 15px; /* Space below the heading */
+    text-align: center; /* Center the heading text */
+}
+
+
+
+.timeline {
+    width: 80%;
+    margin: 10vh auto 15px; /* Starts after scrolling */
+    position: center;
+    opacity: 0.1;
+    transition: opacity 0.5s ease-in-out;
+    padding-bottom: 50px; /* More space between items */
+}
+
+.timeline:hover {
+    opacity: 1; /* Becomes visible when hovered */
+}
+
+.timeline-item {
+    width: 40%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin: 20px 0;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    background-color: #111;
+    color: rgb(226, 159, 13);
+    box-shadow: 0 0 20px #00ff00;
+}
+
+.timeline-item:hover {
+    background-color: rgba(0, 255, 0, 0.2); /* Greenish tint */
+    box-shadow: 0 0 20px #ffc400, 0 0 40px #0000ff;
+}
+
+/* Centered Timeline Heading */
+.timeline header h2 {
+    font-size: 3em;
+    text-shadow: 0 0 10px #ff5733, 0 0 20px #ffbd33, 0 0 30px #ff5733;
+    color: #ff9900;
+    margin: 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+/* Add spacing between sections */
+
+.additional-content {
+    background-color: rgba(12, 12, 11, 0.7); /* Light orange background with transparency */
+    color: #ff9101; /* White text color */
+   margin-top: 350px;
+    border-radius: 1px; /* Rounded corners */
+   
+}
+.jokes-section h2 {
+    color: #ff5733; /* Orange color for the heading */
+    
+    text-shadow: 0 0 10px #ffbd33, 0 0 20px #ff5733; /* Optional: add a glowing effect */
+    margin-bottom: 15px; /* Space below the heading */
+    font-size: 3em
+}
+
+
+
+/* Spooky Jokes Section */
+.jokes-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin:  auto;
+}
+
+.jokes-section li {
+    opacity: 0; /* Start invisible */
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    color: #f17806fa;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 10px #ffbd33;
+}
+
+/* Reveal each joke on hover */
+.jokes-section:hover li:nth-child(1) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.jokes-section:hover li:nth-child(2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+.jokes-section:hover li:nth-child(3) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+.jokes-section:hover li:nth-child(4) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.9s;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}

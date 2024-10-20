@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spooky Halloween</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1 class="glow" id="main-heading">Spooky Halloween Night</h1>
+        </header>
+
+        <!-- Navigation Buttons -->
+        <nav>
+            <button class="nav-btn" onclick="scrollToSection('timeline')">Timeline</button>
+            <button class="nav-btn" onclick="scrollToSection('main')">Main Course</button>
+            <button class="nav-btn" onclick="scrollToSection('jokes')">Jokes</button>
+        </nav>
+
+        <!-- Image Options -->
+        <div class="image-options">
+            <div class="image-container">
+                <img src="Firefly an imageof scary pumkin which is used as a spooky thing for halloween 76508.jpg" alt="Pumpkin">
+                <div class="scary-text">Beware the Pumpkin!</div>
+            </div>
+            <div class="image-container">
+                <img src="ghost.jpeg" alt="Ghost">
+                <div class="scary-text">Spooky Ghost Sighting!</div>
+            </div>
+            <div class="image-container">
+                <img src="skull.jpg" alt="Skull">
+                <div class="scary-text">The Creepy Skull!</div>
+            </div>
+            <div class="image-container">
+                <img src="bats.jpeg" alt="Bats">
+                <div class="scary-text">Watch out for Bats!</div>
+            </div>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="timeline">
+            <header>
+                <h2>Halloween Timeline</h2>
+            </header>
+        <main id="timeline">
+            <section class="timeline">
+                
+                <div class="timeline-item left">
+                    <h2 class="glow-text">The Origins of Halloween</h2>
+                    <p>Halloween dates back to the ancient Celtic festival of Samhain.</p>
+                </div>
+                <div class="timeline-item right">
+                    <h2 class="glow-text">Modern Halloween</h2>
+                    <p>Today, Halloween is celebrated worldwide with costumes, parties, and decorations.</p>
+                </div>
+                <div class="timeline-item left">
+                    <h2 class="glow-text">Halloween Traditions</h2>
+                    <p>Carving pumpkins and trick-or-treating are key traditions.</p>
+                </div>
+                <div class="timeline-item right">
+                    <h2 class="glow-text">Spooky Parties</h2>
+                    <p>Costume parties and ghost stories add to the excitement of Halloween.</p>
+                </div>
+            </section>
+            <!-- Moved timeline heading here -->
+            <div style="height: 30px;"></div>
+        </main>
+
+        <!-- Main Course Section -->
+        <section id="main" class="additional-content">
+            <div class="additional-content">
+                <!-- Main course content goes here -->
+            </div>
+            
+            <h2>Main Course: Halloween Foods</h2>
+            <p>Halloween is not just about costumes and decorations; it's also a time for deliciously spooky foods! Here are some popular treats:</p>
+            <ul>
+                <li><strong>Pumpkin Soup:</strong> A warm and comforting dish, often spiced with cinnamon and nutmeg.</li>
+                <li><strong>Witch's Brew Punch:</strong> A fun, fizzy drink made with green punch and floating gummy worms.</li>
+                <li><strong>Monster Eyeballs:</strong> Meatballs topped with mozzarella cheese and an olive to resemble creepy eyeballs.</li>
+                <li><strong>Ghostly Cupcakes:</strong> Vanilla cupcakes decorated with white frosting and chocolate chip eyes to look like little ghosts.</li>
+                <li><strong>Candy Corn Treats:</strong> A mix of candy corn, nuts, and popcorn for a sweet and salty snack.</li>
+                <li><strong>Spider Web Dip:</strong> A layered dip with sour cream piped on top to create a spider web effect.</li>
+                <li><strong>Graveyard Dirt Cups:</strong> Chocolate pudding cups topped with crushed Oreos and gummy worms for a spooky dessert!</li>
+            </ul>
+        </section>
+
+        <!-- Spooky Jokes Section -->
+        <section id="jokes" class="jokes-section">
+            <div class="jokes-section"></div>
+            <h2>Spooky Jokes</h2>
+            <ul>
+                <li>Why don't skeletons fight each other? They don't have the guts!</li>
+                <li>What’s a ghost’s favorite fruit? Boo-berries!</li>
+                <li>Why are graveyards so noisy? Because of all the coffin!</li>
+                <li>What do witches ask for at hotels? Broom service!</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        // Smooth scroll function
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
